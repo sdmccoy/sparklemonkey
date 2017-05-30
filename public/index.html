@@ -6,25 +6,35 @@
     <link rel="stylesheet" href="public/styles/base.css">
     <link rel="stylesheet" href="public/styles/layout.css">
     <link rel="stylesheet" href="public/styles/modules.css">
+    <script src=“https://use.fontawesome.com/febea918c6.js“></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <title>Sparkle Monkey Concert Finder</title>
   </head>
   <body>
     <nav>
-
+      <button type="button" name="map"></button>
+      <button type="button" name="list"></button>
     </nav>
     <main>
-      <form class="filters" action="index.html" method="post">
-
+      <form class="filters" action="" method="post">
+        <input type="text" name="area" value="">
+        <input type="date" name="start-date" value="">
+        <input type="date" name="end-date" value="">
       </form>
-      <div id="about-us" class="">
+      <section id="about" class="">
 
-      </div>
-      <div id="map" class="">
+      </section>
+      <section id="map" class="">
 
-      </div>
-      <div id="list" class="">
+      </section>
+      <section id="list" class="">
 
-      </div>
+      </section>
     </main>
+    <footer>
+      <button type="button" name="about"></button>
+    </footer>
+    <!-- API scripts -->
+    <script src="https://maps.googleapis.com/maps/api/js" async defer></script>
   </body>
 </html>
