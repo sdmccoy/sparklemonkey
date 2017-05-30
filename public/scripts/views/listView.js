@@ -7,7 +7,7 @@ var app = app || {};
   const render = Handlebars.compile($('#list-template').text());
 
   listView.initIndexPage = function(){
-    $('#list-template').append(app.concerts).map(render)
+    $('#list-template').append(app.Concert.all).map(render)
   }
   module.listView = listView;
 })(app);

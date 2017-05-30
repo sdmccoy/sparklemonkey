@@ -7,7 +7,7 @@ var app = app || {};
 
   listController.index = function(){
     $('.button-content').hide();
-    //show section 
+    $('#list').show();
   }
   module.listController = listController;
 })(app);

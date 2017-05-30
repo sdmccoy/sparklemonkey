@@ -4,18 +4,18 @@
     <title>Sparkle Monkey Concert Finder</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/styles/base.css">
-    <link rel="stylesheet" href="/styles/layout.css">
-    <link rel="stylesheet" href="/styles/modules.css">
-    <link rel="stylesheet" href="styles/map.css">
-    <script src="https://use.fontawesome.com/febea918c6.js"></script>
-    <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
+    <link rel="stylesheet" href="public/styles/base.css">
+    <link rel="stylesheet" href="public/styles/layout.css">
+    <link rel="stylesheet" href="public/styles/modules.css">
+    <script src=“https://use.fontawesome.com/febea918c6.js“></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
     <!-- Handlebars template for list view -->
     <script id="list-template" type="text/x-handlebars-template">
       <li>
-        <p>Artist: {{artist}}</p>
+        <p>Event: {{name}}</p>
         <p>Date: {{date}}</p>
         <p>Venue: {{venue}}</p>
         <a href="{{url}}">Buy tickets at Ticketmaster</a>
@@ -24,8 +24,8 @@
   </head>
   <body>
     <nav>
-      <button type="button" name="map"></button>
-      <button type="button" name="list"></button>
+      <button type="button" name="map"><a href="/"><i class="fa fa-map" aria-hidden="true"></i>Map</a></button>
+      <button type="button" name="list"><a href="/list"><i class="fa fa-list" aria-hidden="true"></i>List</a></button>
     </nav>
     <main>
       <form class="filters" action="" method="post">
@@ -33,26 +33,18 @@
         <input type="date" name="start-date" value="">
         <input type="date" name="end-date" value="">
       </form>
-      <section id="about" class="button-content">
-
-      </section>
       <section id="map" class="button-content">
 
       </section>
       <section id="list" class="button-content">
 
       </section>
+      <section id="about" class="button-content">
+
+      </section>
     </main>
     <footer>
-      <button type="button" name="about"></button>
+      <button type="button" name="about"><a href="/about"><i class="fa fa-question-circle" aria-hidden="true"></i>About Us</a></button>
     </footer>
-    <!-- API scripts -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZH_UpkKrdX2kPGwflfYMV5nofoB4Uf7s&v=3.exp&libraries=visualization"></script>
-    <!-- model scripts -->
-    <script src="/vendor/scripts/tmkey.js"></script>
-    <script src="/scripts/models/concert.js"></script>
-    <!-- view scripts -->
-    <script src="scripts/views/map.js"></script>
-
   </body>
 </html>
