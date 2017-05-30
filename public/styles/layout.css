@@ -2,3 +2,35 @@
 body {
   background-color: #222;
 }
+#top-bar {
+  height: 10%;
+  width: 100%;
+  background-color: black;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 1;
+  padding-bottom: 2%;
+}
+#map {
+  padding: 37% 0;
+  border: 10px solid black;
+  height: 100%;
+  padding-bottom: 2%;
+}
+#bottom-bar {
+  height: 10%;
+  width: 100%;
+  background-color: black;
+  bottom: 0;
+  z-index: 1;
+  position: fixed;
+  text-align: center;
+  padding-top: ;
+}
+.top-button{
+  margin: 5px;
+}
+.bottom-button{
+  margin: 5px;
+}

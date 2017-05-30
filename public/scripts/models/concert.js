@@ -19,7 +19,7 @@ var app = app || {};
 
   }
 
-  const defautParams = {
+  const defaultParams = {
     apikey: tmAPIKey,
     city: 'Seattle',
     startDateTime: new Date(),

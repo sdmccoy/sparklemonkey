@@ -4,9 +4,9 @@
     <title>Sparkle Monkey Concert Finder</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/styles/base.css">
-    <link rel="stylesheet" href="/styles/layout.css">
-    <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
     <link rel="stylesheet" href="styles/map.css">
     <script src="https://use.fontawesome.com/febea918c6.js"></script>
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
@@ -23,16 +23,19 @@
     </script>
   </head>
   <body>
-    <nav>
-      <button type="button" name="map"></button>
-      <button type="button" name="list"></button>
-    </nav>
-    <main>
-      <form class="filters" action="" method="post">
-        <input type="text" name="area" value="">
-        <input type="date" name="start-date" value="">
-        <input type="date" name="end-date" value="">
-      </form>
+    <div id="top-bar">
+      <nav>
+        <button class="top-button" type="button" name="map">Map View</button>
+        <button type="button" name="list">List View</button>
+      </nav>
+      <main>
+        <form class="filters" action="" method="post">
+          <input type="text" name="area" value="">
+          <input type="date" name="start-date" value="">
+          <input type="date" name="end-date" value="">
+        </form>
+    </div>
+    <br>
       <section id="about" class="button-content">
 
       </section>
@@ -44,7 +47,9 @@
       </section>
     </main>
     <footer>
-      <button type="button" name="about"></button>
+      <div id="bottom-bar">
+        <button class="bottom-button" type="button" name="about">About Us!</button>
+      </div>
     </footer>
     <!-- API scripts -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZH_UpkKrdX2kPGwflfYMV5nofoB4Uf7s&v=3.exp&libraries=visualization"></script>
