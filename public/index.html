@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Sparkle Monkey Concert Finder</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="public/styles/base.css">
@@ -8,7 +9,16 @@
     <link rel="stylesheet" href="public/styles/modules.css">
     <script src=“https://use.fontawesome.com/febea918c6.js“></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <title>Sparkle Monkey Concert Finder</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+    <!-- Handlebars template for list view -->
+    <script id="list-entry" type="text/x-handlebars-template">
+      <div id="list-template">
+        <h2>Artist: {{artist}}</h2>
+        <h2>Date: {{date}}</h2>
+        <h2>Venue: {{venue}}</h2>
+        <h2>Buy Tickets: {{url}}</h2>
+      </div>
+    </script>
   </head>
   <body>
     <nav>
