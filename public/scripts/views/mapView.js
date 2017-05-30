@@ -2,10 +2,9 @@
 
 var app = app || {};
 
-(function initMap(modules){
-  const newMap = {};
-
-  function loadMap(position, json) {
+(function(module){
+  const mapView = [];
+  function initMap(position, json) {
     var mapSection = $('#map');
     var map = new google.maps.Map(mapSection, {
       center: {lat: position.coords.latitude, lng: position.coords.longitude},
@@ -24,5 +23,5 @@ var app = app || {};
     marker.setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
     console.log(marker);
   }
-  modules.newMap = newMap;
+  module.newMap = newMap;
 })(app);

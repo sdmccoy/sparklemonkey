@@ -2,12 +2,12 @@
 
 var app = app || {};
 
-(function showEvents(json) {
-  const events = [];
-  for(var i=0; i<json.page.size; i++) {
-    json.forEach('', function(){
-      $('#list').append()
-    }).append("<p>"+json._embedded.events[i].name+"</p>");
+(function(module) {
+  const listView = {};
+  const render = Handlebars.compile($('#list-template').text());
+
+  listView.initIndexPage = function(){
+    $('#list-template').append(app.concerts).map(render)
   }
-  json.events = events;
+  module.listView = listView;
 })(app);
