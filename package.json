@@ -1,0 +1,23 @@
+{
+  "name": "sparklemonkey",
+  "version": "1.0.0",
+  "description": "An application to display concert information in the Seattle area based on user input.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdmccoy/sparklemonkey.git"
+  },
+  "author": "Megan Flood, Fortunato Maycotte, Scott McCoy, TJay Rocket",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sdmccoy/sparklemonkey/issues"
+  },
+  "homepage": "https://github.com/sdmccoy/sparklemonkey#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
