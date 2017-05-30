@@ -126,3 +126,9 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/node,macos,linux,windows
+
+##Google API Key##
+mapkey.js
+
+##Ticketmaster API Key##
+tmkey.js
