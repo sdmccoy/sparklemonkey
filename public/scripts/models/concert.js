@@ -30,7 +30,7 @@ var app = app || {};
   Concert.fetchAll = function(params, callback) {
     $.ajax({
       url: `https://app.ticketmaster.com/discovery/v2/events.json?${params.forEach(function(param) {
-        return
+        return param[key];
       })}`
     })
   }
