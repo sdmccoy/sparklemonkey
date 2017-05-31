@@ -15,6 +15,7 @@ app.use(express.static('./public'));
 
 // ROUTES //
 
+app.get('/googlemap/src', function(req, res) { res.redirect(`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLEMAP_KEY}&v=3.exp&libraries=visualization`) })
 
 // START SERVER //
 
