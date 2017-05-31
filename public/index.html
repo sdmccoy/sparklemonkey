@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
     <link rel="stylesheet" href="/styles/map.css">
+    <link  href="http://fonts.googleapis.com/css?family=Cabin:400,500,600,bold" rel="stylesheet" type="text/css" >
+    <link  href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold" rel="stylesheet" type="text/css" >
     <script src="https://use.fontawesome.com/febea918c6.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="/googlemap/src"></script>
@@ -24,16 +26,18 @@
     </script>
   </head>
   <body>
-    <nav>
-      <button type="button" name="map"><a href="/"><i class="fa fa-map" aria-hidden="true"></i>Map</a></button>
-      <button type="button" name="list"><a href="/list"><i class="fa fa-list" aria-hidden="true"></i>List</a></button>
-    </nav>
-    <main>
-      <form class="filters" action="" method="post">
-        <input type="text" name="area" value="">
-        <input type="date" name="start-date" value="">
-        <input type="date" name="end-date" value="">
-      </form>
+    <div id="top-bar">
+      <nav>
+        <button type="button" class="top-button" name="map"><a href="/"><i class="fa fa-map" aria-hidden="true"></i> Map</a></button>
+        <button type="button" class="top-button" name="list"><a href="/list"><i class="fa fa-list" aria-hidden="true"></i> List</a></button>
+      </nav>
+      <main>
+        <form class="filters" action="" method="post">
+          <input type="text" name="area" value="">
+          <input type="date" name="start-date" value="">
+          <input type="date" name="end-date" value="">
+        </form>
+    </div>
       <section id="map" class="button-content">
 
       </section>
@@ -45,7 +49,9 @@
       </section>
     </main>
     <footer>
-      <button type="button" name="about"><a href="/about"><i class="fa fa-question-circle" aria-hidden="true"></i>About Us</a></button>
+      <div id="bottom-bar">
+        <button type="button" class="bottom-button" name="about"><a href="/about"><i class="fa fa-question-circle" aria-hidden="true"></i>About Us</a></button>
+      </div>
     </footer>
 
     <!-- model scripts -->

@@ -1,4 +1,48 @@
-
 body {
   background-color: #222;
+}
+#top-bar {
+  height: 10%;
+  width: 100%;
+  background-color: #000;
+  top: 0;
+  text-align: center;
+}
+button{
+  display: inline-block;
+  margin: 10px;
+  padding: 5px 20px 5px 20px;
+  border: none;
+  font-size: 1.5em;
+  background-color: #222222;
+  border: 2px solid #222;
+  border-radius: 15px;
+  -webkit-border-radius: 10px;
+
+    -webkit-box-shadow:
+        0px 3px rgba(128,128,128,1), /* gradient effects */
+        0px 4px rgba(118,118,118,1),
+        0px 5px rgba(108,108,108,1),
+        0px 6px rgba(98,98,98,1),
+        0px 7px rgba(88,88,88,1),
+        0px 8px rgba(78,78,78,1),
+        0px 14px 6px -1px rgba(128,128,128,1); /* shadow */
+
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+}
+#map {
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+#bottom-bar {
+  height: 10%;
+  width: 100%;
+  background-color: #000;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
 }
