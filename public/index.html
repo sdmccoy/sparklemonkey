@@ -33,10 +33,11 @@
         <button type="button" class="top-button" name="map"><a href="/"><i class="fa fa-map" aria-hidden="true"></i> Map</a></button>
         <button type="button" class="top-button" name="list"><a href="/list"><i class="fa fa-list" aria-hidden="true"></i> List</a></button>
       </nav>
-      <form class="filters" action="" method="post">
-        <input type="text" name="area" value="">
-        <input type="date" name="start-date" value="">
-        <input type="date" name="end-date" value="">
+      <form class="filters">
+        <input type="text" name="area" value="" placeholder="Zip-Code">
+        <input type="date" name="startDate" value="" placeholder="mm/dd/yyyy">
+        <input type="date" name="endDate" value="" placeholder="mm/dd/yyyy">
+        <input type="submit" value="Find Concerts!">
       </form>
     </div>
     <main>
@@ -61,7 +62,8 @@
     <script src="/vendor/scripts/mapkey.js"></script>
     <script src="/scripts/models/concert.js"></script>
     <!-- Map scripts -->
-    <script src="scripts/views/map.js"></script>
+    <script src="/scripts/views/map.js"></script>
+    <script src="/scripts/views/mapView.js"></script>
     <script src="/scripts/controllers/mapController.js"></script>
     <!-- <script src="/scripts/views/mapView.js"></script> -->
     <!-- List scripts -->
