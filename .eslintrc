@@ -6,7 +6,8 @@
     "page": true,
     "$": true,
     "marked": true,
-    "hljs": true
+    "hljs": true,
+    "google": true
   },
   "extends": "eslint:recommended",
   "parserOptions": {
