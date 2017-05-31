@@ -6,19 +6,19 @@ function updateMap (concerts){
   var styleSelector = $('#style-selector');
   if(styleSelector.val() === 'dark-mode'){
     mapOptions.styles = darkView;
-    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
     initMap(concerts);
   } else if (styleSelector.val() === 'cb-mode'){
     mapOptions.styles = cbView;
-    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
     initMap(concerts);
   } else if (styleSelector.val() === 'night-mode'){
     mapOptions.styles = nightView;
-    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
     initMap(concerts);
   } else {
     mapOptions.styles = [];
-    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
   }
 }
 
