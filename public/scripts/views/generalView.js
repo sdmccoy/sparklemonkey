@@ -10,6 +10,7 @@ var app = app || {};
   generalView.handleFilterFormSubmit = function() {
     $('form').off('submit').on('submit', function(e) {
       e.preventDefault();
+      // $('#loading').show();
       let path = [f.area.value, f.startDate.value, f.endDate.value].join('/');
       page.show(`/list/${path}`);
     })
