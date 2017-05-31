@@ -4,18 +4,23 @@
     <title>Sparkle Monkey Concert Finder</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/vendor/styles/reset.css">
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
     <link rel="stylesheet" href="/styles/map.css">
+    <link  href="http://fonts.googleapis.com/css?family=Cabin:400,500,600,bold" rel="stylesheet" type="text/css" >
+    <link  href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold" rel="stylesheet" type="text/css" >
     <script src="https://use.fontawesome.com/febea918c6.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="/googlemaps/src"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
     <!-- Handlebars template for list view -->
     <script id="list-template" type="text/x-handlebars-template">
       <li>
+        <img src="{{img}}"/>
         <p>Event: {{name}}</p>
         <p>Date: {{date}}</p>
         <p>Venue: {{venue}}</p>
@@ -24,16 +29,18 @@
     </script>
   </head>
   <body>
-    <nav>
-      <button type="button" name="map"><a href="/"><i class="fa fa-map" aria-hidden="true"></i>Map</a></button>
-      <button type="button" name="list"><a href="/list"><i class="fa fa-list" aria-hidden="true"></i>List</a></button>
-    </nav>
-    <main>
+    <div id="top-bar">
+      <nav>
+        <button type="button" class="top-button" name="map"><a href="/"><i class="fa fa-map" aria-hidden="true"></i> Map</a></button>
+        <button type="button" class="top-button" name="list"><a href="/list"><i class="fa fa-list" aria-hidden="true"></i> List</a></button>
+      </nav>
       <form class="filters" action="" method="post">
         <input type="text" name="area" value="">
         <input type="date" name="start-date" value="">
         <input type="date" name="end-date" value="">
       </form>
+    </div>
+    <main>
       <section id="map" class="button-content">
 
       </section>
@@ -45,13 +52,25 @@
       </section>
     </main>
     <footer>
-      <button type="button" name="about"><a href="/about"><i class="fa fa-question-circle" aria-hidden="true"></i>About Us</a></button>
+      <div id="bottom-bar">
+        <button type="button" class="bottom-button" name="about"><a href="/about"><i class="fa fa-question-circle" aria-hidden="true"></i>About Us</a></button>
+      </div>
     </footer>
 
     <!-- model scripts -->
     <script src="/vendor/scripts/tmkey.js"></script>
+    <script src="/vendor/scripts/mapkey.js"></script>
     <script src="/scripts/models/concert.js"></script>
-    <!-- view scripts -->
-    <script src="/scripts/views/map.js"></script>
+    <!-- Map scripts -->
+    <script src="scripts/views/map.js"></script>
+    <script src="/scripts/controllers/mapController.js"></script>
+    <!-- <script src="/scripts/views/mapView.js"></script> -->
+    <!-- List scripts -->
+    <script src="/scripts/controllers/listController.js"></script>
+    <script src="/scripts/views/listView.js"></script>
+    <!-- About scripts -->
+    <script src="/scripts/controllers/aboutController.js"></script>
+
+    <script src="/scripts/controllers/routes.js"></script>
   </body>
 </html>
