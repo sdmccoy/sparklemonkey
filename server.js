@@ -28,6 +28,8 @@ app.get('/googlemaps/src',function(req, res) {
 
 app.get('/ticketmaster/concerts', proxyTicketMaster);
 
+app.get('/*', function(req, res) { res.sendFile('index.html', { root: './public' }); });
+
 // START SERVER //
 
 app.listen(PORT, function() {

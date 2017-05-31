@@ -6,6 +6,15 @@ var app = app || {};
 
   const mapView = {};
 
+  const f = $('form')[0];
+
+  mapView.initPage = function() {
+    if (!f.area.value && !f.startDate.value && !f.endDate.value) {
+      app.generalView.setDefaults();
+    }
+    app.generalView.handleFilterFormSubmit();
+  }
+
   mapView.initMap = function(){
     const map = new google.maps.Map($('#map'), app.mapOptions);
 

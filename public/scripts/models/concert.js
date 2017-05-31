@@ -4,6 +4,7 @@ var app = app || {};
 
 (function(module) {
 
+  // creates a new Concert object with a raw event from the TicketMaster API
   function Concert(rawConcertObject) {
     this.name = rawConcertObject.name;
     this.id = rawConcertObject.id;
@@ -16,10 +17,15 @@ var app = app || {};
     this.venueLong = rawConcertObject._embedded.venues[0].location.longitude;
   }
 
+  // all the Concerts from the most recent TM API request
   Concert.all = [];
+
 
   Concert.loadAll = function(rawConcerts) {
     Concert.all = rawConcerts.map(function(concert) { return new Concert(concert); });
+    Concert.all.sort(function(a, b) {
+      return new Date(`${a.date} ${a.time}`) - new Date(`${b.date} ${b.time}`);
+    })
   };
 
   Concert.defaultParams = {
