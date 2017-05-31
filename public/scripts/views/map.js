@@ -1,7 +1,6 @@
 'use strict';
 
-// moved to mapOptions
-
+//style for the map
 var mapOptions = {
   zoom: 15,
   styles: [
@@ -92,8 +91,7 @@ var mapOptions = {
 
   }
 }
-// moved to mapView
-
+// launches the map
 var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
 google.maps.event.addDomListener(window, 'resize', function() {
@@ -103,21 +101,15 @@ google.maps.event.addDomListener(window, 'resize', function() {
 });
 
 // start of marker clusters
-
 function initMap() {
-
-  // var map = new google.maps.Map(document.getElementById('map'), {
-  //   zoom: 5,
-  //   center: {lat: -30.024, lng: 140.887}
-  // });
 
   // Create an array of alphabetical characters used to label the markers.
   var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-    // Add some markers to the map.
-    // Note: The code uses the JavaScript Array.prototype.map() method to
-    // create an array of markers based on a given "locations" array.
-    // The map() method here has nothing to do with the Google Maps API.
+  // Add some markers to the map.
+  // Note: The code uses the JavaScript Array.prototype.map() method to
+  // create an array of markers based on a given "locations" array.
+  // The map() method here has nothing to do with the Google Maps API.
   var locations = [
     {lat: -31.563910, lng: 147.154312},
     {lat: -33.718234, lng: 150.363181},
@@ -142,7 +134,7 @@ function initMap() {
     {lat: -42.734358, lng: 147.501315},
     {lat: -42.735258, lng: 147.438000},
     {lat: -43.999792, lng: 170.463352}
-  ]
+  ];
 
   var markers = locations.map(function(location, i) {
     return new google.maps.Marker({
@@ -151,7 +143,7 @@ function initMap() {
     });
   });
 
-    // Add a marker clusterer to manage the markers.
+  // Add a marker clusterer to manage the markers.
   var markerCluster = new MarkerClusterer(map, markers,
       {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
