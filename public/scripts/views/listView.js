@@ -12,7 +12,6 @@ const f = $('form')[0];
       app.generalView.setDefaults();
     }
     app.generalView.handleFilterFormSubmit();
-    console.log('mmmm',app.Concert.all);
     $('#list').append(app.Concert.all.map(render))
   }
   module.listView = listView;

@@ -23,25 +23,24 @@ google.maps.event.addDomListener(window, 'resize', function() {
 
 // start of marker clusters
 function initMap(concerts) {
-  console.log('test1');
   // Create an array of alphabetical characters used to label the markers.
-  // var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   var noteIcon = '/img/note-icon.png';
-  console.log(concerts);
+  var windowContent = concerts.map(function(concert){
+    return `Event: ${concert.name}<br>Date: ${concert.date}<br>Time: ${concert.time}<br>Venue: ${concert.venue}<br><a href="${concert.url}" target="_blank">Buy Tickets</a>`
+  });
 
   // Add some markers to the map.
   // Note: The code uses the JavaScript Array.prototype.map() method to
   // create an array of markers based on a given 'locations' array.
   // The map() method here has nothing to do with the Google Maps API.
   var locations = concerts.map(function(concert){
-    console.log('test3');
     return {lat: parseFloat(concert.venueLat), lng: parseFloat(concert.venueLong)};
   });
 
-  var markers = locations.map(function(location, i) {
+
+  var markers = locations.map(function(location) {
     return new google.maps.Marker({
       position: location,
-      // label: labels[i % labels.length],
       icon: noteIcon,
       animation: google.maps.Animation.DROP
     });
@@ -51,7 +50,12 @@ function initMap(concerts) {
   var markerCluster = new MarkerClusterer(map, markers,
       {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
+  markers.forEach(function(marker, index){
+    var infoWindow = new google.maps.InfoWindow({
+      content: windowContent[index]
+    });
+    marker.addListener('click', function(){
+      infoWindow.open(map, marker);
+    })
+  });
 }
-// app.Concert.fetchAll(app.Concert.defaultParams, function(){
-//   initMap(app.Concert.all);
-// })

@@ -18,7 +18,6 @@ var app = app || {};
       classificationName: 'Music',
       sort: 'date,asc',
     }
-    console.log(ctx.filter);
     next();
   };
 
