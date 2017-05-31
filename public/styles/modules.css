@@ -1,5 +1,9 @@
 section#list li p {
   float: right;
+  width: 10%;
+}
+
+section#list li#par {
   width: 20%;
 }
 
