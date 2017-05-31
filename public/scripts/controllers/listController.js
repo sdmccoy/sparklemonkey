@@ -8,6 +8,7 @@ var app = app || {};
   listController.index = function(){
     $('.button-content').hide();
     $('#list').show();
+    app.listView.initIndexPage();
   }
   module.listController = listController;
 })(app);

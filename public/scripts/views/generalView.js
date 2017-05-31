@@ -11,7 +11,7 @@ var app = app || {};
     $('form').off('submit').on('submit', function(e) {
       e.preventDefault();
       let path = [f.area.value, f.startDate.value, f.endDate.value].join('/');
-      page.show(`/${path}`);
+      page.show(`/list/${path}`);
     })
   }
 

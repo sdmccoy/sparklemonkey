@@ -8,6 +8,7 @@ var app = app || {};
   mapController.index = function(){
     $('.button-content').hide();
     $('#map').show();
+    console.log('calling',app.Concert.all);
     app.mapView.initPage();
   };
   module.mapController = mapController;
