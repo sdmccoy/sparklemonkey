@@ -23,30 +23,23 @@ var app = app || {};
   };
 
   Concert.defaultParams = {
-    apikey: tmAPIKey,
     city: 'Seattle',
-    startDateTime: new Date(),
-    endDateTime: new Date(new Date().setDate(new Date().getDate() + 7)),
+    startDateTime: new Date().toISOString().replace(/\.\d\d\d/, ''),
+    endDateTime: new Date(new Date().setDate(new Date().getDate() + 7)).toISOString().replace(/\.\d\d\d/, ''),
     classificationName: 'Music'
   };
 
   Concert.fetchAll = function(params, callback) {
-    let urlParamString = Object.keys(params).reduce(function(paramString, key) {
-      return paramString +
-      `${key}=${(typeof params[key] !== 'object' ? params[key].toString() : params[key].toISOString().replace(/\.\d\d\d/, ''))
-      .replace(/\s/g, '%20').replace(/:/g, '%3A')}&`;
-    }, '')
-    $.ajax({
-      url: `https://app.ticketmaster.com/discovery/v2/events.json?${urlParamString}size=1`,
-      method: 'GET',
-    })
+    params.size = 1;
+    $.get('/ticketmaster/concerts', params)
     .then(function(data) {
       let dataId = data.page.totalElements + '-' + data._embedded.events[0].name;
       if (dataId === localStorage.dataId) {
         Concert.loadAll(JSON.parse(localStorage.rawData));
         if (callback) callback();
       } else {
-        $.get(`https://app.ticketmaster.com/discovery/v2/events.json?${urlParamString}`)
+        params.size = 20;
+        $.get('/ticketmaster/concerts', params)
         .then(function(data) {
           localStorage.dataId = dataId;
           localStorage.rawData = JSON.stringify(data._embedded.events);
