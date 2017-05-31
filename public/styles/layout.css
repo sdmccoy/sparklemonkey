@@ -7,6 +7,7 @@ body {
   background-color: #000;
   top: 0;
   text-align: center;
+  z-index: 1000;
 }
 button{
   color: white;
@@ -39,7 +40,7 @@ a{
 #map {
   height: 100%;
   width: 100%;
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
