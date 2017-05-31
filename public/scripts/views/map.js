@@ -3,15 +3,15 @@
 //style for the map
 var mapOptions = {
   zoom: 15,
-  styles: blackView,
+  styles: '#',
   center: new google.maps.LatLng(47.618217, -122.351832),
   mapTypeId: google.maps.MapTypeId.STREET,
   zoomControl: true,
   zoomControlOptions: {
     position: google.maps.ControlPosition.RIGHT_CENTER
-
   }
 }
+
 // launches the map
 var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
