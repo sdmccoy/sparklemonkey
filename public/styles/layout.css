@@ -54,3 +54,7 @@ a{
   bottom: 0;
   text-align: center;
 }
+
+#list {
+  border-style: ridge;
+}
