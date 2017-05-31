@@ -35,9 +35,9 @@
         <button type="button" class="top-button" name="list"><a href="/list"><i class="fa fa-list" aria-hidden="true"></i> List</a></button>
       </nav>
       <form class="filters">
-        <input type="text" name="area" value="" placeholder="Zip-Code">
-        <input type="date" name="startDate" value="" placeholder="mm/dd/yyyy">
-        <input type="date" name="endDate" value="" placeholder="mm/dd/yyyy">
+        <input type="text" name="area" value="" placeholder="City">
+        <input type="date" name="startDate" value="" placeholder="yyyy/mm/dd">
+        <input type="date" name="endDate" value="" placeholder="yyyy/mm/dd">
         <input type="submit" value="Find Concerts!">
       </form>
     </div>
@@ -75,16 +75,11 @@
     </footer>
 
     <!-- model scripts -->
-    <script src="/vendor/scripts/tmkey.js"></script>
-    <script src="/vendor/scripts/mapkey.js"></script>
     <script src="/scripts/models/concert.js"></script>
-    <!-- general scripts -->
-    <script src="/scripts/views/generalView.js"></script>
-    <script src="/scripts/controllers/generalController.js"></script>
     <!-- Map scripts -->
     <script src="/scripts/views/mapView.js"></script>
-    <script src="scripts/views/mapOptions.js"></script>
-    <script src="scripts/views/map.js"></script>
+    <script src="/scripts/views/mapOptions.js"></script>
+    <script src="/scripts/views/map.js"></script>
     <script src="/scripts/controllers/mapController.js"></script>
     <!-- <script src="/scripts/views/mapView.js"></script> -->
     <!-- List scripts -->
@@ -92,6 +87,9 @@
     <script src="/scripts/views/listView.js"></script>
     <!-- About scripts -->
     <script src="/scripts/controllers/aboutController.js"></script>
+    <!-- general scripts -->
+    <script src="/scripts/views/generalView.js"></script>
+    <script src="/scripts/controllers/generalController.js"></script>
 
     <script src="/scripts/controllers/routes.js"></script>
   </body>

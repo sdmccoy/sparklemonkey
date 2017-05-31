@@ -25,8 +25,8 @@ google.maps.event.addDomListener(window, 'resize', function() {
 function initMap(concerts) {
   console.log('test1');
   // Create an array of alphabetical characters used to label the markers.
-  var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  var noteIcon = 'http://www.kindermusik.co.za/site/wp-content/uploads/2015/12/icon-music-note-kindermusik-blue-2000x2000-2000x2000-e1448965274640.png';
+  // var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var noteIcon = '/img/note-icon.png';
   console.log(concerts);
 
   // Add some markers to the map.
@@ -41,7 +41,7 @@ function initMap(concerts) {
   var markers = locations.map(function(location, i) {
     return new google.maps.Marker({
       position: location,
-      label: labels[i % labels.length],
+      // label: labels[i % labels.length],
       icon: noteIcon,
       animation: google.maps.Animation.DROP
     });
@@ -52,6 +52,6 @@ function initMap(concerts) {
       {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
 }
-app.Concert.fetchAll(app.Concert.defaultParams, function(){
-  initMap(app.Concert.all);
-})
+// app.Concert.fetchAll(app.Concert.defaultParams, function(){
+//   initMap(app.Concert.all);
+// })
