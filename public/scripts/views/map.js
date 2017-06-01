@@ -26,7 +26,7 @@ function initMap(concerts) {
   // Create an array of alphabetical characters used to label the markers.
   var noteIcon = '/img/note-icon.png';
   var windowContent = concerts.map(function(concert){
-    return `Event: ${concert.name}<br>Date: ${concert.date}<br>Time: ${concert.time}<br>Venue: ${concert.venue}<br><a href="${concert.url}" target="_blank">Buy Tickets</a>`
+    return `<div id="window-content" style="font-size:20px"><strong>Event:</strong> ${concert.name}<br><strong>Date: </strong>${concert.date}<br><strong>Time: </strong>${concert.time}<br><strong>Venue: </strong>${concert.venue}<br><strong><a href="${concert.url}" target="_blank" style="color: blue;">Click to Buy Tickets</a></strong></div>`
   });
 
   // Add some markers to the map.
@@ -39,17 +39,19 @@ function initMap(concerts) {
 
 
   var markers = locations.map(function(location) {
+    // console.log(locations);
     return new google.maps.Marker({
       position: location,
+      map: map,
       icon: noteIcon,
       animation: google.maps.Animation.DROP
     });
   });
 
   // Add a marker clusterer to manage the markers.
-  var markerCluster = new MarkerClusterer(map, markers,
-      {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-
+  // var markerCluster = new MarkerClusterer(map, markers,
+  //     {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+  // This displays the info box when you click on the marker.
   markers.forEach(function(marker, index){
     var infoWindow = new google.maps.InfoWindow({
       content: windowContent[index]
