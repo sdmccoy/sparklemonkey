@@ -10,7 +10,11 @@ var app = app || {};
     $('#map').show();
     app.mapView.initPage();
     if(app.Concert.all.length > 0) {
-      initMap(app.Concert.all)
+      if (ctx.params.area) {
+        app.mapView.getLocationCoords(ctx.params.area, app.mapView.updateMapLocation)
+      } else {
+        initMap(app.Concert.all)
+      }
     }
   };
   module.mapController = mapController;

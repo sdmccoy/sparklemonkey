@@ -11,22 +11,32 @@ var app = app || {};
   generalView.handleFilterFormSubmit = function() {
     $('form').off('submit').on('submit', function(e) {
       e.preventDefault();
-      if (isValidDate(f.startDate.value) && isValidDate(f.endDate.value) && isValidCity(f.area.value)) {
-        let path = [f.area.value, f.startDate.value, f.endDate.value].join('/');
-        if (location.href.includes('list')) {
-          page.show(`/list/${path}`);
-        } else {
-          page.show(`/${path}`);
-        }
-      } else {
-        console.log('invalid');
+      $('#loading').show();
+      // check city for valid string form
+      if(!/^[\W\d]+$/.test(f.area.value)) {
+        // check city against geo API
+        app.mapView.getLocationCoords(f.area.value, function(data) {
+          if (isValidDate(f.startDate.value) && isValidDate(f.endDate.value) && data.results.length === 1) {
+            let city = data.results[0].formatted_address.split(', ').slice(0,2).join(',%20');
+            let path = [city, f.startDate.value, f.endDate.value].join('/');
+            if (location.href.includes('list')) {
+              page.show(`/list/${path}`);
+            } else {
+              page.show(`/${path}`);
+            }
+          } else {
+            $('#loading').hide();
+            if (data.results.length === 0) {
+              alert('Please enter a valid city.');
+            } else if (data.results.length !== 1){
+              alert('Please enter a more specific city.');
+            } else {
+              alert('Please enter a date in the form yyyy-mm-dd.');
+            }
+          }
+        });
       }
     })
-  }
-
-  // checks if the given place is a string of letters only
-  const isValidCity = function(city) {
-    return /^[A-Za-z- ]+$/.test(city);
   }
 
   // checks if the given date string is of the form yyyy-mm-dd

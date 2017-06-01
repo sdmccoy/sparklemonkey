@@ -1,30 +1,29 @@
 'use strict';
 
-
-
 function updateMap (concerts){
   var styleSelector = $('#style-selector');
   if(styleSelector.val() === 'dark-mode'){
     mapOptions.styles = darkView;
-    map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    map.setOptions(mapOptions);
     initMap(concerts);
   } else if (styleSelector.val() === 'cb-mode'){
     mapOptions.styles = cbView;
-    map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    map.setOptions(mapOptions);
     initMap(concerts);
   } else if (styleSelector.val() === 'night-mode'){
     mapOptions.styles = nightView;
-    map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    map.setOptions(mapOptions);
     initMap(concerts);
   } else {
     mapOptions.styles = [];
-    map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    map.setOptions(mapOptions);
     initMap(concerts);
   }
 }
 
 $('#style-selector').on('change', function(){
   updateMap(app.Concert.all);
+  localStorage.mapStyle = $(this).val();
 })
 
 var defaultView = [

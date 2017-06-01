@@ -1,10 +1,10 @@
 'use strict';
 
 var app = app || {};
-const f = $('form')[0];
 
 (function(module) {
   const listView = {};
+  const f = $('form')[0];
   const render = Handlebars.compile($('#list-template').html());
 
   listView.initIndexPage = function(){
@@ -12,7 +12,7 @@ const f = $('form')[0];
       app.generalView.setDefaults();
     }
     app.generalView.handleFilterFormSubmit();
-    $('#list').append(app.Concert.all.map(render))
+    $('#list').empty().append(app.Concert.all.map(render))
   }
   module.listView = listView;
 })(app);
