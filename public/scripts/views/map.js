@@ -13,7 +13,7 @@ var mapOptions = {
 }
 
 // launches the map
-let map = new google.maps.Map(document.getElementById('map'), mapOptions);
+ let map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
 // google.maps.event.addDomListener(window, 'resize', function() {
 //   var center = map.getCenter();
@@ -50,25 +50,7 @@ function initMap(concerts) {
     oms.addMarker(marker);
   });
 
-  // var markers = locations.map(function(location) {
-  //   return new google.maps.Marker({
-  //     position: location,
-  //     map: map,
-  //     icon: noteIcon,
-  //     animation: google.maps.Animation.DROP
-  //   });
-  // });
-
   // Add a marker clusterer to manage the markers.
-  let markerCluster = new MarkerClusterer(map, markers,
-      {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-  // This displays the info box when you click on the marker.
-  // markers.forEach(function(marker, index){
-  //   var infoWindow = new google.maps.InfoWindow({
-  //     content: windowContent[index]
-  //   });
-  //   marker.addListener('click', function(){
-  //     infoWindow.open(map, marker);
-  //   })
-  // });
+  // let markerCluster = new MarkerClusterer(map, markers,
+  //     {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 }
