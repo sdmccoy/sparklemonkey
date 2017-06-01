@@ -36,7 +36,7 @@ var app = app || {};
         $('#loading').hide();
         if (callback) callback();
       } else {
-        params.size = 20;
+        params.size = 50;
         $.get('/ticketmaster/concerts', params)
         .then(function(data) {
           localStorage.dataId = dataId;
