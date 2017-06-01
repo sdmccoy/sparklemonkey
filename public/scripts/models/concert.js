@@ -33,6 +33,7 @@ var app = app || {};
       let dataId = data.page.totalElements + '-' + data._embedded.events[0].name;
       if (dataId === localStorage.dataId) {
         Concert.loadAll(JSON.parse(localStorage.rawData));
+        $('#loading').hide();
         if (callback) callback();
       } else {
         params.size = 50;
@@ -41,6 +42,7 @@ var app = app || {};
           localStorage.dataId = dataId;
           localStorage.rawData = JSON.stringify(data._embedded.events);
           Concert.loadAll(data._embedded.events);
+          $('#loading').hide();
           if (callback) callback();
         });
 

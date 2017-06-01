@@ -11,6 +11,7 @@ var app = app || {};
   generalView.handleFilterFormSubmit = function() {
     $('form').off('submit').on('submit', function(e) {
       e.preventDefault();
+      $('#loading').show();
       // check city for valid string form
       if(!/^[\W\d]+$/.test(f.area.value)) {
         // check city against geo API
@@ -24,6 +25,7 @@ var app = app || {};
               page.show(`/${path}`);
             }
           } else {
+            $('#loading').hide();
             if (data.results.length === 0) {
               alert('Please enter a valid city.');
             } else if (data.results.length !== 1){
