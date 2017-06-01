@@ -12,7 +12,7 @@ const f = $('form')[0];
       app.generalView.setDefaults();
     }
     app.generalView.handleFilterFormSubmit();
-    $('#list').append(app.Concert.all.map(render))
+    $('#list').empty().append(app.Concert.all.map(render))
   }
   module.listView = listView;
 })(app);

@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 function updateMap (concerts){
   var styleSelector = $('#style-selector');
   if(styleSelector.val() === 'dark-mode'){
