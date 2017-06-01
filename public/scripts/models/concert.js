@@ -13,28 +13,19 @@ var app = app || {};
     this.date = rawConcertObject.dates.start.localDate;
     this.time = rawConcertObject.dates.start.localTime;
     this.venue = rawConcertObject._embedded.venues[0].name;
-    this.venueLat = rawConcertObject._embedded.venues[0].location.latitude;
-    this.venueLong = rawConcertObject._embedded.venues[0].location.longitude;
+    this.venueLat = rawConcertObject._embedded.venues[0].location ? rawConcertObject._embedded.venues[0].location.latitude : '0';
+    this.venueLong = rawConcertObject._embedded.venues[0].location ? rawConcertObject._embedded.venues[0].location.longitude : '0';
   }
 
   // all the Concerts from the most recent TM API request
   Concert.all = [];
 
-
+  // creates new Concert objects from an array of raw events and stores them in the array of all concerts
   Concert.loadAll = function(rawConcerts) {
     Concert.all = rawConcerts.map(function(concert) { return new Concert(concert); });
-    Concert.all.sort(function(a, b) {
-      return new Date(`${a.date} ${a.time}`) - new Date(`${b.date} ${b.time}`);
-    })
   };
 
-  Concert.defaultParams = {
-    city: 'Seattle',
-    startDateTime: new Date().toISOString().replace(/\.\d\d\d/, ''),
-    endDateTime: new Date(new Date().setDate(new Date().getDate() + 7)).toISOString().replace(/\.\d\d\d/, ''),
-    classificationName: 'Music'
-  };
-
+  // takes a set of parameters then checks if new information is available. if so, get list from the TM API and put in localStorage, else take from localStorage
   Concert.fetchAll = function(params, callback) {
     params.size = 1;
     $.get('/ticketmaster/concerts', params)

@@ -55,7 +55,7 @@
   margin-top: 1%;
 }
 #natoP {
-  float: left;
+  float: right;
   border-style: ridge;
   height: 15%;
   width: 30%;
@@ -68,4 +68,17 @@
   height: 15%;
   width: 30%;
   margin-right: 10%;
+}
+#list {
+  margin-top: 8%;
+  margin-bottom: 6%;
+  width: 100%;
+}
+#par {
+  float: right;
+  width: 40%;
+  text-align: left;
+}
+#about {
+  background-image: url(/img/monkeywall.JPG);
 }
