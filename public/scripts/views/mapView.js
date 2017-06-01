@@ -25,6 +25,7 @@ var app = app || {};
     if (!f.area.value && !f.startDate.value && !f.endDate.value) {
       app.generalView.setDefaults();
     }
+    $('form').show();
     app.generalView.handleFilterFormSubmit();
     if (localStorage.mapStyle) {
       $('#style-selector').val(localStorage.mapStyle);

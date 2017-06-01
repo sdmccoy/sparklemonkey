@@ -11,6 +11,7 @@ var app = app || {};
     if (!f.area.value && !f.startDate.value && !f.endDate.value) {
       app.generalView.setDefaults();
     }
+    $('form').show();
     app.generalView.handleFilterFormSubmit();
     $('#list').empty().append(app.Concert.all.map(render))
   }

@@ -13,6 +13,7 @@ var app = app || {};
     }
     app.generalView.handleFilterFormSubmit();
     $('#monkey-logo').addClass('small');
+    $('form').hide();
   }
   module.aboutView = aboutView;
 })(app);
