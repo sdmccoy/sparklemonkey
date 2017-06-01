@@ -1,7 +1,10 @@
 .clear-fix{
   clear: both;
 }
-
+.ticket {
+  width: 20%;
+  border:none;
+}
 
 #meganIMG {
   width: 160px;
@@ -66,7 +69,7 @@
   text-align: left;
   background-color: gray;
   border-style: solid;
-  height: 50%;
+  height: 100%;
 }
 #about {
 
