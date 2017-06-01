@@ -1,16 +1,30 @@
 section#list li p {
   float: right;
-  width: 100%;
-  height: 5%;
-  font-size: 35px;
+  width: 80%;
+  height: 15%;
+  font-size: 33px;
   margin:auto;
 }
 
 section#list li {
   width: 90%;
-  height: auto;
+  height: 29%;
   margin-left: 5%;
-  margin-top: 10%;
+  margin-top: 5%;
+}
+
+div#concerts {
+border-style: double;
+height: auto;
+}
+div#concerts img {
+border-style: solid;
+height: auto;
+background-image: url(img/grad.jpg);
+}
+#par a{
+  border-style: groove;
+  background-color: white;
 }
 
 @media only screen and (min-width: 680px) {

@@ -68,17 +68,23 @@
   height: 15%;
   width: 30%;
   margin-right: 10%;
+  background-color: gray;
 }
 #list {
   margin-top: 8%;
   margin-bottom: 6%;
   width: 100%;
+  list-style-type:none
+
 }
 #par {
   float: right;
-  width: 40%;
+  width: 60%;
   text-align: left;
+  background-color: gray;
+  border-style: solid;
+  height: 50%;
 }
 #about {
-  background-image: url(/img/monkeywall.JPG);
+
 }
