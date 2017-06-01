@@ -11,6 +11,7 @@ var app = app || {};
   generalView.handleFilterFormSubmit = function() {
     $('form').off('submit').on('submit', function(e) {
       e.preventDefault();
+      $('#monkey-logo').addClass('small');
       $('#loading').show();
       // check city for valid string form
       if(!/^[\W\d]+$/.test(f.area.value)) {
@@ -64,6 +65,7 @@ var app = app || {};
       f.area.value = params[0].replace(/%20/g, ' ');
       f.startDate.value = params[1];
       f.endDate.value = params[2];
+      $('#monkey-logo').addClass('small');
     } else {
       f.area.value = 'Seattle';
       let today = new Date();

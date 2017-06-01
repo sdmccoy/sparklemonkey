@@ -10,6 +10,19 @@ body {
   position: fixed;
   z-index: 1;
 }
+
+#monkey-logo {
+  margin-top: 10px;
+  height: 400%;
+}
+
+#monkey-logo.small {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  height: 10%;
+}
+
 button{
   color: white;
   display: inline-block;
@@ -20,24 +33,41 @@ button{
   background-color: #A92F41;
   border: 2px solid #222;
   border-radius: 15px;
-  -webkit-border-radius: 10px;
-
-    -webkit-box-shadow:
-        0px 3px rgba(128,128,128,1),
-        0px 4px rgba(118,118,118,1),
-        0px 5px rgba(108,108,108,1),
-        0px 6px rgba(98,98,98,1),
-        0px 7px rgba(88,88,88,1),
-        0px 8px rgba(78,78,78,1),
-        0px 14px 6px -1px rgba(128,128,128,1);
-
-    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
 }
+
+button a {
+  color: white;
+}
+
+button:hover {
+  background-color: #de8d47;
+}
+
 a{
   color: #252120;
   text-decoration: none;
   font-family: 'Hammersmith One', sans-serif;
 }
+
+.filters input {
+  font-size: 1em;
+  border: none;
+  height: 2em;
+  padding: 5px;
+  border-radius: 5px;
+  vertical-align: middle;
+  font-family: 'Hammersmith One', sans-serif;
+  border: 2px solid #222;
+}
+
+.filters input[type="date"] {
+  width: 10em;
+}
+
+.filters input[type="submit"] {
+  background-color: #00dd82;
+}
+
 #map {
   height: 100%;
   width: 100%;
@@ -61,6 +91,7 @@ a{
 #style-selector {
   display: block;
   margin: 0 auto;
+  font-family: 'Hammersmith One', sans-serif;
 }
 .bottom-button {
   font-size: 1em;
