@@ -19,6 +19,7 @@ function updateMap (concerts){
   } else {
     mapOptions.styles = [];
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    initMap(concerts);
   }
 }
 
