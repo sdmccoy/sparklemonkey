@@ -24,7 +24,7 @@ google.maps.event.addDomListener(window, 'resize', function() {
 // start of marker clusters
 function initMap(concerts) {
   // Create an array of alphabetical characters used to label the markers.
-  var noteIcon = '/img/note-icon.png';
+  var noteIcon = $('#style-selector').val() === 'dark-mode' || $('#style-selector').val() === 'night-mode' ? '/img/note-icon.png' : '/img/dark-note-icon.png';
   var windowContent = concerts.map(function(concert){
     return `<div id="window-content" style="font-size:20px"><strong>Event:</strong> ${concert.name}<br><strong>Date: </strong>${concert.date}<br><strong>Time: </strong>${concert.time}<br><strong>Venue: </strong>${concert.venue}<br><strong><a href="${concert.url}" target="_blank" style="color: blue;">Click to Buy Tickets</a></strong></div>`
   });
