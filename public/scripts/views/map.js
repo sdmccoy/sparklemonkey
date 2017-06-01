@@ -30,7 +30,6 @@ function initMap(concerts) {
 
   // trying to delete markers
   markers.forEach(function(m) { m.setMap(null); m = null; });
-  console.log(markers);
   // starting the spiderfier library to assist with identical location markers.
   let oms = new OverlappingMarkerSpiderfier(map, {
     markersWontMove: true,
@@ -44,7 +43,7 @@ function initMap(concerts) {
       position: locations,
       icon: noteIcon,
       animation: google.maps.Animation.DROP,
-      visible: location.lat !== 0 && location.lng !== 0
+      visible: locations.lat !== 0 && locations.lng !== 0
     });
     //builds the info window when the user clicks on the location marker
     let windowContent = `<div id="window-content" style="font-size:20px"><strong>Event:</strong> ${concert.name}<br><strong>Date: </strong>${concert.date}<br><strong>Time: </strong>${concert.time}<br><strong>Venue: </strong>${concert.venue}<br><strong><a href="${concert.url}" target="_blank" style="color: blue;">Click to Buy Tickets</a></strong></div>`
