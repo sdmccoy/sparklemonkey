@@ -19,12 +19,16 @@
     <!-- Handlebars template for list view -->
     <script id="list-template" type="text/x-handlebars-template">
       <li>
+        <div id='concerts'>
         <img src="{{img}}"/>
-        <p>Event: {{name}}</p>
-        <p>Date: {{date}}</p>
-        <p>Time: {{time}}</p>
-        <p>Venue: {{venue}}</p>
-        <a href="{{url}}">Buy tickets at Ticketmaster</a>
+        <div id="par">
+         <p>Event: {{name}}</p>
+         <p>Date: {{date}}</p>
+         <p>Time: {{time}}</p>
+         <p>Venue: {{venue}}</p>
+         <a href="{{url}}" >Buy tickets at Ticketmaster</a>
+       </div>
+     </div>
       </li>
     </script>
   </head>
@@ -67,7 +71,9 @@
           Show belly scratch the postman wake up lick paw wake up owner meow
           meow sit in box, and eat grass, throw it back</p>
       </section>
+
     </main>
+    <img id="loading" src="/img/monkey_loading.gif" alt="monkey">
     <footer>
       <div id="bottom-bar">
         <div id="map-style-control" class="style-control">
