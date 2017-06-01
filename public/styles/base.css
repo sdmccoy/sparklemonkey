@@ -2,84 +2,81 @@
   clear: both;
 }
 
-body {
-  min-height: 100%;
-}
 
 #meganIMG {
   float: left;
-  width: 260px;
-  height: 260px;
-  margin-left: 10%;
+  width: 160px;
+  height: 160px;
+  /*margin-left: 10%;*/
   border-radius: 250%;
-  margin-top: 10%;
+  /*margin-top: 10%;*/
   border-style: solid;
 }
 #TjIMG {
-  float: right;
-  width: 260px;
-  height: 260px;
-  margin-right: 18%;
+  float: left;
+  width: 160px;
+  height: 160px;
+  /*margin-right: 18%;*/
   border-radius: 250%;
-  margin-top: 10%;
+  /*margin-top: 10%;*/
   background: #fff;
   border-style: solid;
 }
 #natoIMG {
   float: left;
-  width: 260px;
-  height: 260px;
-  margin-left: -26%;
+  width: 160px;
+  height: 160px;
+  /*margin-left: -26%;*/
   border-radius: 250%;
-  margin-top: 10%;
+  /*margin-top: 10%;*/
   border-style: solid;
 }
 #scottIMG {
-  float: right;
-  width: 260px;
-  height: 260px;
-  margin-right: -29.5%;
+  float: left;
+  width: 160px;
+  height: 160px;
+  /*margin-right: -29.5%;*/
   border-radius: 250%;
   border-style: solid;
-  margin-top: 10%
+  /*margin-top: 10%*/
 }
 
 #meganP {
   float: left;
   border-style: solid;
-  height: 15%;
-  width: 30%;
-  margin-top: 32%;
-  margin-left: -24%;
+  height: auto;
+  /*width: 30%;*/
+  /*margin-top: 32%;
+  margin-left: -24%;*/
   background-color: gray;
 }
 #TjP {
-  float: right;
+  float: left;
   border-style: solid;
-  height: 15%;
-  width: 30%;
-  margin-right: 12.5%;
-  margin-top: 1%;
+  height: 100%;
+  /*width: 30%;*/
+  /*margin-right: 12.5%;
+  margin-top: 1%;*/
   background-color: gray;
 }
 #natoP {
-  float: right;
+  float: left;
   border-style: solid;
-  height: 15%;
-  width: 30%;
-  margin-left: -80%;
-  margin-top: 32%;
+  height: auto;
+  /*width: 30%;*/
+  /*margin-left: -80%;
+  margin-top: 32%;*/
   background-color: gray;
-  margin-bottom: 15%;
+  /*margin-bottom: 15%;*/
 }
 #scottP {
-  float: right;
+  float: left;
   border-style: solid;
-  height: 15%;
-  width: 30%;
-  margin-right: -35%;
+  height: 100%;
+  /*width: 30%;
+  margin-right: -35%;*/
   background-color: gray;
-  margin-top: 30%;
+  /*margin-top: 30%;*/
 }
 #list {
   margin-top: 8%;
@@ -106,4 +103,29 @@ body {
   top: 25%;
   left: calc(50% - 100px);
   width: 200px;
+}
+
+#megan {
+  padding: 5%;
+display: inline-block;
+  width: 200px;
+  height: 130px;
+}
+#tj {
+    padding: 5%;
+display: inline-block;
+  width: 200px;
+  height: 130px;
+}
+#nato {
+    padding: 5%;
+display: inline-block;
+  width: 200px;
+  height: 130px;
+}
+#scott {
+    padding: 5%;
+display: inline-block;
+  width: 200px;
+  height: 130px;
 }
