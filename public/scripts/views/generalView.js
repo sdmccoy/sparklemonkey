@@ -11,13 +11,19 @@ var app = app || {};
   generalView.handleFilterFormSubmit = function() {
     $('form').off('submit').on('submit', function(e) {
       e.preventDefault();
+      $('#monkey-logo').addClass('small');
       $('#loading').show();
       // check city for valid string form
       if(!/^[\W\d]+$/.test(f.area.value)) {
         // check city against geo API
         app.mapView.getLocationCoords(f.area.value, function(data) {
           if (isValidDate(f.startDate.value) && isValidDate(f.endDate.value) && data.results.length === 1) {
-            let city = data.results[0].formatted_address.split(', ').slice(0,2).join(',%20');
+            let city = data.results[0].formatted_address.split(', ')
+            if (city[2] === 'USA') {
+              city = city.slice(0,2).join(',%20');
+            } else {
+              city = city.shift();
+            }
             let path = [city, f.startDate.value, f.endDate.value].join('/');
             if (location.href.includes('list')) {
               page.show(`/list/${path}`);
@@ -59,6 +65,7 @@ var app = app || {};
       f.area.value = params[0].replace(/%20/g, ' ');
       f.startDate.value = params[1];
       f.endDate.value = params[2];
+      $('#monkey-logo').addClass('small');
     } else {
       f.area.value = 'Seattle';
       let today = new Date();
