@@ -4,79 +4,54 @@
 
 
 #meganIMG {
-  float: left;
   width: 160px;
   height: 160px;
-  /*margin-left: 10%;*/
   border-radius: 250%;
-  /*margin-top: 10%;*/
   border-style: solid;
 }
 #TjIMG {
-  float: left;
   width: 160px;
   height: 160px;
-  /*margin-right: 18%;*/
   border-radius: 250%;
-  /*margin-top: 10%;*/
   background: #fff;
   border-style: solid;
 }
 #natoIMG {
-  float: left;
   width: 160px;
   height: 160px;
-  /*margin-left: -26%;*/
   border-radius: 250%;
-  /*margin-top: 10%;*/
   border-style: solid;
 }
 #scottIMG {
-  float: left;
   width: 160px;
   height: 160px;
-  /*margin-right: -29.5%;*/
   border-radius: 250%;
   border-style: solid;
-  /*margin-top: 10%*/
 }
 
 #meganP {
   float: left;
   border-style: solid;
   height: 130px;
-  /*width: 30%;*/
-  /*margin-top: 32%;
-  margin-left: -24%;*/
   background-color: gray;
 }
 #TjP {
   float: left;
   border-style: solid;
   height: 130px;
-  /*width: 30%;*/
-  /*margin-right: 12.5%;
-  margin-top: 1%;*/
   background-color: gray;
 }
 #natoP {
   float: left;
   border-style: solid;
   height: 130px;
-  /*width: 30%;*/
-  /*margin-left: -80%;
-  margin-top: 32%;*/
   background-color: gray;
-  /*margin-bottom: 15%;*/
 }
 #scottP {
   float: left;
   border-style: solid;
   height: 130px;
-  /*width: 30%;
-  margin-right: -35%;*/
   background-color: gray;
-  /*margin-top: 30%;*/
 }
 #list {
   margin-top: 8%;
@@ -106,6 +81,7 @@
 }
 
 #megan {
+  text-align: center;
   margin-left: 9.5%;
   display: inline-block;
   width: 200px;
@@ -113,18 +89,21 @@
   margin-left: 9.5%;
 }
 #tj {
+  text-align: center;
   display: inline-block;
   width: 200px;
   height: 100%;
   margin-left: 9.5%;
 }
 #nato {
+  text-align: center;
   display: inline-block;
   width: 200px;
   height: 100%;
   margin-left: 9.5%;
 }
 #scott {
+  text-align: center;
   display: inline-block;
   width: 200px;
   height: 100%;
