@@ -30,22 +30,28 @@ var app = app || {};
     params.size = 1;
     $.get('/ticketmaster/concerts', params)
     .then(function(data) {
-      let dataId = data.page.totalElements + '-' + data._embedded.events[0].name;
-      if (dataId === localStorage.dataId) {
-        Concert.loadAll(JSON.parse(localStorage.rawData));
-        $('#loading').hide();
-        if (callback) callback();
-      } else {
-        params.size = 50;
-        $.get('/ticketmaster/concerts', params)
-        .then(function(data) {
-          localStorage.dataId = dataId;
-          localStorage.rawData = JSON.stringify(data._embedded.events);
-          Concert.loadAll(data._embedded.events);
+      if (data.page.totalElements) {
+        let dataId = data.page.totalElements + '-' + data._embedded.events[0].name;
+        if (dataId === localStorage.dataId) {
+          Concert.loadAll(JSON.parse(localStorage.rawData));
           $('#loading').hide();
           if (callback) callback();
-        });
-
+        } else {
+          params.size = 50;
+          $.get('/ticketmaster/concerts', params)
+          .then(function(data) {
+            localStorage.dataId = dataId;
+            localStorage.rawData = JSON.stringify(data._embedded.events);
+            Concert.loadAll(data._embedded.events);
+            $('#loading').hide();
+            if (callback) callback();
+          });
+        }
+      } else {
+        $('#loading').hide();
+        Concert.all = [];
+        alert('No concerts found.')
+        if (callback) callback();
       }
     }, function(e) { console.error(e); })
   };

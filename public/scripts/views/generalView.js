@@ -17,7 +17,12 @@ var app = app || {};
         // check city against geo API
         app.mapView.getLocationCoords(f.area.value, function(data) {
           if (isValidDate(f.startDate.value) && isValidDate(f.endDate.value) && data.results.length === 1) {
-            let city = data.results[0].formatted_address.split(', ').slice(0,2).join(',%20');
+            let city = data.results[0].formatted_address.split(', ')
+            if (city[2] === 'USA') {
+              city = city.slice(0,2).join(',%20');
+            } else {
+              city = city.shift();
+            }
             let path = [city, f.startDate.value, f.endDate.value].join('/');
             if (location.href.includes('list')) {
               page.show(`/list/${path}`);
