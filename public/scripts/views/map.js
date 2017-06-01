@@ -46,7 +46,7 @@ function initMap(concerts) {
       visible: locations.lat !== 0 && locations.lng !== 0
     });
     //builds the info window when the user clicks on the location marker
-    let windowContent = `<div id="window-content" style="font-size:20px"><strong>Event:</strong> ${concert.name}<br><strong>Date: </strong>${concert.date}<br><strong>Time: </strong>${concert.time}<br><strong>Venue: </strong>${concert.venue}<br><strong><a href="${concert.url}" target="_blank" style="color: blue;">Click to Buy Tickets</a></strong></div>`
+    let windowContent = `<div id="window-content"><strong>Event:</strong> ${concert.name}<br><strong>Date: </strong>${concert.date}<br><strong>Time: </strong>${concert.time}<br><strong>Venue: </strong>${concert.venue}<br><strong><a href="${concert.url}" target="_blank">Click to Buy Tickets</a></strong></div>`
     let infoWindow = new google.maps.InfoWindow({
       content: windowContent
     });
