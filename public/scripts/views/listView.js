@@ -1,10 +1,10 @@
 'use strict';
 
 var app = app || {};
-const f = $('form')[0];
 
 (function(module) {
   const listView = {};
+  const f = $('form')[0];
   const render = Handlebars.compile($('#list-template').html());
 
   listView.initIndexPage = function(){

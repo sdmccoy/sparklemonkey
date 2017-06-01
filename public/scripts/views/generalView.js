@@ -16,14 +16,21 @@ var app = app || {};
         // check city against geo API
         app.mapView.getLocationCoords(f.area.value, function(data) {
           if (isValidDate(f.startDate.value) && isValidDate(f.endDate.value) && data.results.length === 1) {
-            let path = [f.area.value, f.startDate.value, f.endDate.value].join('/');
+            let city = data.results[0].formatted_address.split(', ').slice(0,2).join(',%20');
+            let path = [city, f.startDate.value, f.endDate.value].join('/');
             if (location.href.includes('list')) {
               page.show(`/list/${path}`);
             } else {
               page.show(`/${path}`);
             }
           } else {
-            console.log('invalid');
+            if (data.results.length === 0) {
+              alert('Please enter a valid city.');
+            } else if (data.results.length !== 1){
+              alert('Please enter a more specific city.');
+            } else {
+              alert('Please enter a date in the form yyyy-mm-dd.');
+            }
           }
         });
       }

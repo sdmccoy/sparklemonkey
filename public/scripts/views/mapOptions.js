@@ -23,6 +23,7 @@ function updateMap (concerts){
 
 $('#style-selector').on('change', function(){
   updateMap(app.Concert.all);
+  localStorage.mapStyle = $(this).val();
 })
 
 var defaultView = [

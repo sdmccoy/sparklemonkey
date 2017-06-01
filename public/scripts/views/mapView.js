@@ -26,6 +26,10 @@ var app = app || {};
       app.generalView.setDefaults();
     }
     app.generalView.handleFilterFormSubmit();
+    if (localStorage.mapStyle) {
+      $('#style-selector').val(localStorage.mapStyle);
+      $('#style-selector').change();
+    }
   }
 
   module.mapView = mapView;

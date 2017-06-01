@@ -15,7 +15,6 @@ var app = app || {};
     ctx.filter = {
       city: area[0],
       stateCode: area[1],
-      countryCode: area[2],
       startDateTime: new Date(start[0], parseInt(start[1]) - 1, start[2], 0).toISOString().replace(/\.\d\d\d/, ''),
       endDateTime: new Date(end[0], parseInt(end[1]) - 1, end[2], 23, 59).toISOString().replace(/\.\d\d\d/, ''),
       classificationName: 'Music',
