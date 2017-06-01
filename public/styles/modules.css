@@ -1,10 +1,11 @@
 section#list li p {
   float: right;
   width: 80%;
-  height: 15%;
-  font-size: 33px;
+  font-size: 1.5em;
+  font-family:'Hammersmith One', sans-serif;
   margin:auto;
-  list-style-type:none
+  list-style-type:none;
+  padding-left:10px;
 }
 
 section#list li {
@@ -16,16 +17,18 @@ section#list li {
 
 div#concerts {
 border-style: double;
-height: auto;
+height: 200px;
 }
-div#concerts img {
+div#concerts .concert-img {
 border-style: solid;
-height: auto;
+height: 100%;
+max-height: 100%;
 background-image: url(img/grad.jpg);
 }
 #par a{
-  border-style: groove;
-  background-color: white;
+  width: 10%;
+  height: 10%;
+  font-size: 10px;
 }
 
 
@@ -34,7 +37,6 @@ background-image: url(img/grad.jpg);
 }
 
 #window-content strong{
-  font-family:'Hammersmith One', sans-serif;
 }
 
 #window-content a {
@@ -43,7 +45,9 @@ background-image: url(img/grad.jpg);
 
 @media only screen and (max-width: 680px) {
 
+
 }
 @media only screen and (max-width: 680px) {
+
 
 }
