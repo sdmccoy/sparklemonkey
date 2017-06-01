@@ -60,6 +60,10 @@ a{
   border: 2px solid #222;
 }
 
+.filters input:focus {
+  background-color: #de8d47;
+}
+
 .filters input[type="date"] {
   width: 10em;
 }
