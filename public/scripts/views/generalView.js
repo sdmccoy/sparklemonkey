@@ -12,7 +12,7 @@ var app = app || {};
     $('form').off('submit').on('submit', function(e) {
       e.preventDefault();
 
-      // $('#loading').show();
+      $('#loading').show();
 
       if (isValidDate(f.startDate.value) && isValidDate(f.endDate.value) && isValidCity(f.area.value)) {
         let path = [f.area.value, f.startDate.value, f.endDate.value].join('/');

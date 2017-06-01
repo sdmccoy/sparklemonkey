@@ -50,10 +50,17 @@ a{
         margin: 10px;
 }
 #bottom-bar {
-  height: 10%;
+  height: auto;
   width: 100%;
   background-color: #000;
   position: fixed;
   bottom: 0;
   text-align: center;
+}
+#style-selector {
+  display: block;
+  margin: 0 auto;
+}
+.bottom-button {
+  font-size: 1em;
 }

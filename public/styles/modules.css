@@ -4,6 +4,7 @@ section#list li p {
   height: 15%;
   font-size: 33px;
   margin:auto;
+  list-style-type:none
 }
 
 section#list li {
