@@ -2,84 +2,56 @@
   clear: both;
 }
 
-body {
-  min-height: 100%;
-}
 
 #meganIMG {
-  float: left;
-  width: 260px;
-  height: 260px;
-  margin-left: 10%;
+  width: 160px;
+  height: 160px;
   border-radius: 250%;
-  margin-top: 10%;
   border-style: solid;
 }
 #TjIMG {
-  float: right;
-  width: 260px;
-  height: 260px;
-  margin-right: 18%;
+  width: 160px;
+  height: 160px;
   border-radius: 250%;
-  margin-top: 10%;
   background: #fff;
   border-style: solid;
 }
 #natoIMG {
-  float: left;
-  width: 260px;
-  height: 260px;
-  margin-left: -26%;
+  width: 160px;
+  height: 160px;
   border-radius: 250%;
-  margin-top: 10%;
   border-style: solid;
 }
 #scottIMG {
-  float: right;
-  width: 260px;
-  height: 260px;
-  margin-right: -29.5%;
+  width: 160px;
+  height: 160px;
   border-radius: 250%;
   border-style: solid;
-  margin-top: 10%
 }
 
 #meganP {
   float: left;
   border-style: solid;
-  height: 15%;
-  width: 30%;
-  margin-top: 32%;
-  margin-left: -24%;
+  height: 130px;
   background-color: gray;
 }
 #TjP {
-  float: right;
+  float: left;
   border-style: solid;
-  height: 15%;
-  width: 30%;
-  margin-right: 12.5%;
-  margin-top: 1%;
+  height: 130px;
   background-color: gray;
 }
 #natoP {
-  float: right;
+  float: left;
   border-style: solid;
-  height: 15%;
-  width: 30%;
-  margin-left: -80%;
-  margin-top: 32%;
+  height: 130px;
   background-color: gray;
-  margin-bottom: 15%;
 }
 #scottP {
-  float: right;
+  float: left;
   border-style: solid;
-  height: 15%;
-  width: 30%;
-  margin-right: -35%;
+  height: 130px;
   background-color: gray;
-  margin-top: 30%;
 }
 #list {
   margin-top: 8%;
@@ -106,4 +78,37 @@ body {
   top: 25%;
   left: calc(50% - 100px);
   width: 200px;
+}
+
+#megan {
+  text-align: center;
+  margin-left: 9.5%;
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+  margin-left: 9.5%;
+}
+#tj {
+  text-align: center;
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+  margin-left: 9.5%;
+}
+#nato {
+  text-align: center;
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+  margin-left: 9.5%;
+}
+#scott {
+  text-align: center;
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+  margin-left: 9.5%;
+}
+#group {
+  margin-top: 10%;
 }

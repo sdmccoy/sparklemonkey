@@ -28,6 +28,7 @@ background-image: url(img/grad.jpg);
   background-color: white;
 }
 
+
 #window-content {
   font-size:20px;
 }
@@ -40,8 +41,14 @@ background-image: url(img/grad.jpg);
   color: #208454;
 }
 
-@media only screen and (min-width: 680px) {
-
-
-
+@media only screen and (max-width: 680px) {
+  #group {
+    margin-top: 30%;
+  }
+}
+@media only screen and (max-width: 680px) {
+  #group {
+    margin-top: 35%;
+    margin-left: 15%;
+  }
 }
