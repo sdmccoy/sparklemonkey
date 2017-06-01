@@ -2,7 +2,7 @@
 
 //style for the map
 var mapOptions = {
-  zoom: 13,
+  zoom: 12,
   styles: '#',
   center: new google.maps.LatLng(47.618217, -122.351832),
   mapTypeId: google.maps.MapTypeId.STREET,
@@ -21,9 +21,16 @@ google.maps.event.addDomListener(window, 'resize', function() {
   map.setCenter(center);
 });
 
+var markers = [];
+
 // start of marker clusters
 function initMap(concerts) {
+  // trying to delete markers
+  markers.forEach(function(marker) { marker.setMap(null); marker = null; });
+
+  // choose icon based on style of the map
   var noteIcon = $('#style-selector').val() === 'dark-mode' || $('#style-selector').val() === 'night-mode' ? '/img/note-icon.png' : '/img/dark-note-icon.png';
+
   var windowContent = concerts.map(function(concert){
     return `<div id="window-content" style="font-size:20px"><strong>Event:</strong> ${concert.name}<br><strong>Date: </strong>${concert.date}<br><strong>Time: </strong>${concert.time}<br><strong>Venue: </strong>${concert.venue}<br><strong><a href="${concert.url}" target="_blank" style="color: blue;">Click to Buy Tickets</a></strong></div>`
   });
@@ -37,13 +44,14 @@ function initMap(concerts) {
   });
 
 
-  var markers = locations.map(function(location) {
+  markers = locations.map(function(location) {
     // console.log(locations);
     return new google.maps.Marker({
       position: location,
       map: map,
       icon: noteIcon,
-      animation: google.maps.Animation.DROP
+      animation: google.maps.Animation.DROP,
+      visible: location.lat !== 0 && location.lng !== 0
     });
   });
 

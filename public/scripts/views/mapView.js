@@ -14,10 +14,10 @@ var app = app || {};
   }
 
   mapView.updateMapLocation = function(cityObject) {
-    let lat = cityObject.results[0].geometry.location.lat;
-    let long = cityObject.results[0].geometry.location.lng;
-    mapOptions.center = new google.maps.LatLng(lat, long);
-    map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    let newLat = cityObject.results[0].geometry.location.lat;
+    let newLng = cityObject.results[0].geometry.location.lng;
+    mapOptions.center = new google.maps.LatLng(newLat, newLng)
+    map.panTo({ lat: newLat, lng: newLng });
     initMap(app.Concert.all);
   }
 
