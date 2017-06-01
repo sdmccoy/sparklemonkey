@@ -82,33 +82,33 @@
 
 #megan {
   text-align: center;
-  margin-left: 9.5%;
   display: inline-block;
   width: 200px;
   height: 100%;
-  margin-left: 9.5%;
+  margin-right: 5px;
 }
 #tj {
   text-align: center;
   display: inline-block;
   width: 200px;
   height: 100%;
-  margin-left: 9.5%;
+  margin: 0 5px;
 }
 #nato {
   text-align: center;
   display: inline-block;
   width: 200px;
   height: 100%;
-  margin-left: 9.5%;
+  margin: 0 5px;
 }
 #scott {
   text-align: center;
   display: inline-block;
   width: 200px;
   height: 100%;
-  margin-left: 9.5%;
+  margin-left: 5px;
 }
 #group {
   margin-top: 10%;
+  text-align: center;
 }

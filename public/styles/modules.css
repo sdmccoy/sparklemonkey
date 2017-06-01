@@ -42,13 +42,8 @@ background-image: url(img/grad.jpg);
 }
 
 @media only screen and (max-width: 680px) {
-  #group {
-    margin-top: 30%;
-  }
+
 }
 @media only screen and (max-width: 680px) {
-  #group {
-    margin-top: 35%;
-    margin-left: 15%;
-  }
+
 }
