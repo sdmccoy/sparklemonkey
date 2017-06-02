@@ -41,7 +41,7 @@ button{
   border-radius: 15px;
 }
 
-button a {
+a button {
   color: white;
 }
 
@@ -49,9 +49,13 @@ button:hover {
   background-color: #de8d47;
 }
 
-a{
+a, button {
   color: #252120;
   text-decoration: none;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+select {
   font-family: 'Hammersmith One', sans-serif;
 }
 
@@ -86,7 +90,7 @@ a{
   top: 0;
   left: 0;
   z-index: 0;
-  background-color: #000;
+  background-color: #222;
 }
 .style-control {
         margin: 10px;
