@@ -20,7 +20,13 @@ body {
   position: fixed;
   top: 5px;
   left: 5px;
-  height: 10%;
+  height: 6%;
+}
+
+@media only screen and (min-width: 730px) {
+  #monkey-logo.small {
+    height: 10%;
+  }
 }
 
 button{
@@ -58,6 +64,7 @@ a{
   vertical-align: middle;
   font-family: 'Hammersmith One', sans-serif;
   border: 2px solid #222;
+  margin-bottom: 5px;
 }
 
 .filters input:focus {
@@ -79,7 +86,6 @@ a{
   top: 0;
   left: 0;
   z-index: 0;
-  background: #000;
 }
 .style-control {
         margin: 10px;
@@ -87,16 +93,26 @@ a{
 #bottom-bar {
   height: auto;
   width: 100%;
-  background-color: #000;
+  background-color: none;
   position: fixed;
   bottom: 0;
   text-align: center;
 }
+
 #style-selector {
-  display: block;
-  margin: 0 auto;
-  font-family: 'Hammersmith One', sans-serif;
+  display: inline-block;
 }
+
+@media only screen and (min-width: 730px) {
+  #bottom-bar {
+    background-color: #000;
+  }
+  #style-selector {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 .bottom-button {
   font-size: 1em;
 }
