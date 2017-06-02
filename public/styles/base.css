@@ -4,6 +4,9 @@
 .ticket {
   width: 20%;
   border:none;
+  position: relative;
+  top: -25px;
+  left:-15px;
 }
 
 #meganIMG {
@@ -58,7 +61,7 @@
 }
 #list {
   margin-top: 8%;
-  margin-bottom: 6%;
+  margin-bottom: 12%;
   width: 100%;
   list-style-type:none
 
@@ -70,6 +73,7 @@
   background-color: gray;
   border-style: solid;
   height: 100%;
+  padding-top:10px;
 }
 #about {
 
