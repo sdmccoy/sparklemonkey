@@ -60,24 +60,21 @@
   background-color: gray;
 }
 #list {
-  margin-top: 8%;
-  margin-bottom: 12%;
+  margin-top: 25%;
+  margin-bottom: 25%;
   width: 100%;
   list-style-type:none
 
 }
-#par {
-  float: right;
-  width: 60%;
-  text-align: left;
-  background-color: gray;
-  border-style: solid;
-  height: 100%;
-  padding-top:10px;
-}
-#about {
 
+@media only screen and (min-width: 730px) {
+  #list {
+    margin-top: 10%;
+    margin-bottom: 12%;
+  }
 }
+
+
 #loading {
   display: none;
   position: fixed;
@@ -118,4 +115,5 @@
 #group {
   margin-top: 10%;
   text-align: center;
+  margin-bottom: 12%;
 }
