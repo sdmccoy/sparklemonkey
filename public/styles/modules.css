@@ -23,7 +23,6 @@ div#concerts .concert-img {
 border-style: solid;
 height: 100%;
 max-height: 100%;
-background-image: url(img/grad.jpg);
 }
 #par a{
   width: 10%;
@@ -37,17 +36,9 @@ background-image: url(img/grad.jpg);
 }
 
 #window-content strong{
+  font-family:'Hammersmith One', sans-serif;
 }
 
 #window-content a {
   color: #208454;
-}
-
-@media only screen and (max-width: 680px) {
-
-
-}
-@media only screen and (max-width: 680px) {
-
-
 }
